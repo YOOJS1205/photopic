@@ -14,15 +14,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/',
   resolve: {
     alias: [{ find: '@', replacement: '/src' }],
-  },
-  build: {
-    rollupOptions: {
-      input: {
-        main: 'index.html',
-      },
-    },
   },
 });

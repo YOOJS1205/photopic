@@ -1,22 +1,7 @@
 {
-  "headers": [
-    {
-      "source": "/(.*)\\.js$",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/javascript; charset=utf-8"
-        }
-      ]
-    },
-    {
-      "source": "/assets/(.*)\\.js$",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/javascript; charset=utf-8"
-        }
-      ]
+  "build": {
+    "env": {
+      "STORYBOOK_CONFIG_DIR": ".storybook"
     }
-  ]
+  }
 }

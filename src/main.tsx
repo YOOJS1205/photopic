@@ -2,9 +2,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
-import { DialogProvider } from '@/components/common/Dialog/DialogProvider';
+import { DialogProvider } from '@/components/common/Dialog/DialogProvider.tsx';
 import ToastProvider from '@/components/common/Toast/ToastProvider';
-import { router } from '@/routes/routing';
+import { router } from '@/routes/routing.tsx';
 import './index.css';
 
 const queryClient = new QueryClient({
@@ -18,7 +18,7 @@ const queryClient = new QueryClient({
 
 async function prepareMSW() {
   if (process.env.NODE_ENV === 'development') {
-    const { worker } = await import('./mocks/browser');
+    const { worker } = await import('./mocks/browser.ts');
 
     await worker.start();
     console.log('MSW 정상적으로 동작중!');
